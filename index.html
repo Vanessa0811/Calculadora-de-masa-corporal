@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./STYLE/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <title>Calculadora IMC - Índice de Masa Corporal</title>
+</head>
+
+<body style="background-color: palegoldenrod;">
+
+
+    <center>
+
+        <br>
+        <h1 id="titulo">Calculadora IMC - Índice de Masa Corporal</h1>
+        <hr>
+        <br>
+    
+
+        <h2 id="titulo-2">Registro:</h2>
+
+        <form class="calculadora">
+            <div id="campos">
+
+                <p></p> <input required="true" type="number" min=3 value="" id="kilos" placeholder="Ingresa tu peso">
+                <p></p> <input required="true" type="number" min=30 value="" id="altura"
+                    placeholder="Ingresa tu altura en cm">
+                <p></p> <input required="true" type="number" min=1 value="" id="edad" placeholder="Ingresa tu edad"><br>
+                <br>
+                <div class="form-check form-check-inline">
+                    <input checked class="form-check-input" type="radio" name="genero" id="inlineRadio1" value="hombre"
+                        checked>
+                    <label for="mas">Masculino</label>
+                    <i class="bi bi-gender-male"></i>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="genero" id="inlineRadio2" value="mujer">
+                    <label for="mas">Femenino</label>
+                    <i class="bi bi-gender-female"></i>
+                </div>
+
+            </div>
+            <br>
+            <button  id="calcula" type="submit">Calcular</button>
+            <button  id="promedio">Promediar</button>
+        </form>
+        <p id="mensaje">
+        <div id=estadisticas>
+        </div>
+        </p>
+        <p>IMC: <span class="IMC" id="lectura"></span></p>
+
+        <div id="tabla">
+            <table width="70%" heigh="600px" class="tabla1" border="me" id="tablas">
+                <thead >
+                    <tr id="inicio" align="center">
+                        <th>Indice de masa corporal</th>
+                        <th>Rango</th>
+                    </tr>
+                </thead>
+                <thead id="a">
+                    <tr id="delgadezSevero">
+                        <td>18.5 o menos</td>
+                        <td>Delgadez severa</td>
+                    </tr>
+                </thead>
+                <thead id="b">
+                    <tr id="saludable">
+                        <td>18.5 a 24.9</td>
+                        <td>Saludable</td>
+                    </tr>
+                </thead>
+                <thead id="c">
+                    <tr id="sobrepeso">
+                        <td>25.0 a 29.9</td>
+                        <td>Con sobrepeso</td>
+                    </tr>
+                </thead>
+                <thead id="d">
+                    <tr id="obeso">
+                        <td>30.0 a 39.9</td>
+                        <td>Obeso</td>
+                    </tr>
+                </thead>
+                <thead id="e">
+                    <tr id="muyObeso">
+                        <td>40.0 o +</td>
+                        <td>Obesidad extrema</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        
+    </center>
+    <div id="bar-example"></div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script src="./SCRIPT/script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+        
+</body>
+
+</html>
