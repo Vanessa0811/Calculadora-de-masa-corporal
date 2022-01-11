@@ -164,26 +164,3 @@ function mostrar(imcx, kilos, altura, edad, sexo) {
 
 
 
-
-
-
-
-
-// const archivo = {
-//     altura, kilos, edad, sexo, IMCX
-
-// }
-// dato.push(archivo)
-// localStorage.setItem('datos', JSON.stringify(dato))
-
-
-// btnPromediar.addEventListener("click", () => {
-//     dato.forEach(element => {
-//         const {
-//             kilos, altura, edad, sexo, IMCX
-//         } = element
-
-//     });
-// })
-
-
